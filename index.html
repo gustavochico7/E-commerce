@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="#inicio" style="text-decoration:none"><span class="leaf">❧</span> VERDE VIVO</a>
+  <nav><a href="#inicio">Início</a><a href="#loja">Loja</a><a href="#causa">Nossa causa</a><a href="#contato">Contato</a></nav>
+  <button class="cart-button" onclick="openCart()">🛒 Carrinho <span id="cartCount">0</span></button>
+</header>
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy"><div class="eyebrow">Moda com propósito</div><h1>Vista o futuro.<br>Escolha consciente.</h1><p>Moda sustentável, feita para durar. Escolhas melhores para você e para o planeta.</p><a class="btn" href="#loja">Explorar coleção →</a></div>
+  <div class="hero-art"><span>Mais natureza<br>no seu guarda-roupa.</span></div>
+</section>
+<section id="loja">
+  <div class="section-head"><div><h2>Peças que fazem a diferença</h2><p class="sub">Básicos versáteis, materiais responsáveis e estilo sem desperdício.</p></div><div class="filters"><button class="filter active" onclick="filterProducts('Todos',this)">Todos</button><button class="filter" onclick="filterProducts('Roupas',this)">Roupas</button><button class="filter" onclick="filterProducts('Acessórios',this)">Acessórios</button></div></div>
+  <div class="products" id="products"></div>
+</section>
+<div class="values"><div class="value"><span style="font-size:25px">♧</span><div><strong>Materiais responsáveis</strong><small>Escolhas com menor impacto</small></div></div><div class="value"><span style="font-size:25px">♧</span><div><strong>Frete calculado no carrinho</strong><small>Estimativa transparente</small></div></div><div class="value"><span style="font-size:25px">♡</span><div><strong>Compra consciente</strong><small>Qualidade acima do excesso</small></div></div></div>
+<section id="causa" class="about"><div><div class="eyebrow">Nossa causa</div><h2>Moda que respeita o amanhã.</h2><p>Na Verde Vivo, acreditamos que se vestir bem também significa pensar no impacto das nossas escolhas. Priorizamos peças duráveis, materiais reciclados e fibras de origem responsável.</p><ul><li>Menos desperdício e mais reutilização.</li><li>Peças versáteis para usar por muito tempo.</li><li>Informação clara para comprar melhor.</li></ul></div><div class="about-card">“A roupa mais sustentável é aquela que você escolhe com cuidado, usa muitas vezes e conserva por anos.”<br><br><strong>— Nosso compromisso</strong></div></section>
+<section id="contato" class="contact"><h2>Faça parte da mudança.</h2><p>Dúvidas sobre materiais, tamanhos ou seu pedido? Fale com nossa equipe.</p><p>✉ contato@verdevivo.exemplo &nbsp; · &nbsp; Instagram: @verdevivo</p></section>
+</main>
+<footer>VERDE VIVO © 2026 · Projeto escolar demonstrativo de e-commerce sustentável. Não processa pagamentos reais.</footer>
+<div class="drawer-backdrop" id="backdrop" onclick="backdropClose(event)"><aside class="drawer" onclick="event.stopPropagation()"><div class="drawer-head"><h2>Seu carrinho</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartLines"></div><div id="cartContent"></div><div class="checkout" id="checkout"><h3>Finalizar pedido</h3><form onsubmit="placeOrder(event)"><label>Nome completo<input required placeholder="Seu nome"></label><label>E-mail<input type="email" required placeholder="voce@email.com"></label><label>CEP<input required inputmode="numeric" maxlength="9" placeholder="00000-000" oninput="this.value=this.value.replace(/[^0-9-]/g,'')"></label><label>Forma de pagamento (simulação)<select required><option value="">Selecione</option><option>Cartão de crédito — demonstração</option><option>PIX — demonstração</option><option>Boleto — demonstração</option></select></label><button class="btn" style="width:100%" type="submit">Confirmar pedido demonstrativo</button><p class="notice">Esta é uma demonstração escolar: nenhum pagamento será cobrado nem os dados enviados para um servidor.</p></form></div></aside></div>
+
+
+<script src="script.js"></script>
+</html>
